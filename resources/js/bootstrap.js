@@ -1,10 +1,11 @@
 window._ = require('lodash');
 
-/**
- * We'll load the axios HTTP library which allows us to easily issue requests
- * to our Laravel back-end. This library automatically handles sending the
- * CSRF token as a header based on the value of the "XSRF" token cookie.
- */
+try {
+    window.$ = window.jquery = window.jQuery = require('jquery/dist/jquery.slim.min')
+    require('bootstrap/dist/js/bootstrap.bundle.min')
+    window.Vue = require('vue/dist/vue')
+    window.VueRouter = require('vue-router/dist/vue-router')
+} catch (error) { }
 
 window.axios = require('axios');
 
