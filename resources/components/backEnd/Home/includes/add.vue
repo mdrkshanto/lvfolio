@@ -76,6 +76,14 @@
         </div>
       </div>
     </div>
+    <div class="card-footer">
+      <div class="row justify-content-between">
+        <button class="col-1 btn btn-success btn-sm shadow-none">Submit</button>
+        <button class="col-1 btn btn-secondary btn-sm shadow-none" @click.prevent="reset">
+          Reset
+        </button>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -105,6 +113,15 @@ export default {
   methods: {
     bgImg(event) {
       this.form.bgImg = event.target.files[0];
+    },
+    reset() {
+      this.form.bgImg = null;
+      this.form.bgColor = 0;
+      this.form.bgOpacity = 0;
+      this.form.name = null;
+      this.form.focusTitle = null;
+      this.form.shortDescription = null;
+      this.$refs.bgImg.value = null;
     },
   },
 };

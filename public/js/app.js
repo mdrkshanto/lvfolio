@@ -2145,6 +2145,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -2171,6 +2179,15 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     bgImg: function bgImg(event) {
       this.form.bgImg = event.target.files[0];
+    },
+    reset: function reset() {
+      this.form.bgImg = null;
+      this.form.bgColor = 0;
+      this.form.bgOpacity = 0;
+      this.form.name = null;
+      this.form.focusTitle = null;
+      this.form.shortDescription = null;
+      this.$refs.bgImg.value = null;
     }
   }
 });
@@ -34589,6 +34606,30 @@ var render = function () {
             },
           }),
         ]),
+      ]),
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "card-footer" }, [
+      _c("div", { staticClass: "row justify-content-between" }, [
+        _c(
+          "button",
+          { staticClass: "col-1 btn btn-success btn-sm shadow-none" },
+          [_vm._v("Submit")]
+        ),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass: "col-1 btn btn-secondary btn-sm shadow-none",
+            on: {
+              click: function ($event) {
+                $event.preventDefault()
+                return _vm.reset.apply(null, arguments)
+              },
+            },
+          },
+          [_vm._v("\n        Reset\n      ")]
+        ),
       ]),
     ]),
   ])
