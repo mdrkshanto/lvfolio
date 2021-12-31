@@ -14,3 +14,12 @@ export default {
   components: { Header, MainMenu, Footer },
 };
 </script>
+<style>
+.text-justify {
+  text-align: justify;
+}
+
+::placeholder {
+  text-transform: capitalize;
+}
+</style>
