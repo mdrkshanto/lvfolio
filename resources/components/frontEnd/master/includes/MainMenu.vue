@@ -18,7 +18,7 @@
           <router-link :to="{name:'fAbout'}" class="nav-link" :class="$route.name === 'fAbout'?'active':''">About</router-link>
         </li>
         <li class="nav-item">
-          <a href="resume.html" class="nav-link">Resume</a>
+          <router-link :to="{name:'fResume'}" class="nav-link" :class="$route.name === 'fResume'?'active':''">Resume</router-link>
         </li>
         <li class="nav-item">
           <a href="skills.html" class="nav-link">Skills</a>

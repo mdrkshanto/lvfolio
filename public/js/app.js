@@ -5551,6 +5551,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _components_frontEnd_Home_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/frontEnd/Home/index */ "./resources/components/frontEnd/Home/index.vue");
 /* harmony import */ var _components_frontEnd_About_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/frontEnd/About/index */ "./resources/components/frontEnd/About/index.vue");
+/* harmony import */ var _components_frontEnd_Resume_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/frontEnd/Resume/index */ "./resources/components/frontEnd/Resume/index.vue");
+
 
 
 var routes = [{
@@ -5563,6 +5565,11 @@ var routes = [{
   name: 'fAbout',
   meta: 'About',
   component: _components_frontEnd_About_index__WEBPACK_IMPORTED_MODULE_1__["default"]
+}, {
+  path: '/resume',
+  name: 'fResume',
+  meta: 'Resume',
+  component: _components_frontEnd_Resume_index__WEBPACK_IMPORTED_MODULE_2__["default"]
 }];
 
 /***/ }),
@@ -23500,6 +23507,43 @@ component.options.__file = "resources/components/frontEnd/Home/index.vue"
 
 /***/ }),
 
+/***/ "./resources/components/frontEnd/Resume/index.vue":
+/*!********************************************************!*\
+  !*** ./resources/components/frontEnd/Resume/index.vue ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _index_vue_vue_type_template_id_18ef6b0c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.vue?vue&type=template&id=18ef6b0c& */ "./resources/components/frontEnd/Resume/index.vue?vue&type=template&id=18ef6b0c&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  script,
+  _index_vue_vue_type_template_id_18ef6b0c___WEBPACK_IMPORTED_MODULE_0__.render,
+  _index_vue_vue_type_template_id_18ef6b0c___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/components/frontEnd/Resume/index.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/components/frontEnd/master/includes/Footer.vue":
 /*!******************************************************************!*\
   !*** ./resources/components/frontEnd/master/includes/Footer.vue ***!
@@ -23709,6 +23753,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_template_id_c0a7db84_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_template_id_c0a7db84_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./index.vue?vue&type=template&id=c0a7db84&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/components/frontEnd/Home/index.vue?vue&type=template&id=c0a7db84&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/components/frontEnd/Resume/index.vue?vue&type=template&id=18ef6b0c&":
+/*!***************************************************************************************!*\
+  !*** ./resources/components/frontEnd/Resume/index.vue?vue&type=template&id=18ef6b0c& ***!
+  \***************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_template_id_18ef6b0c___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_template_id_18ef6b0c___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_template_id_18ef6b0c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./index.vue?vue&type=template&id=18ef6b0c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/components/frontEnd/Resume/index.vue?vue&type=template&id=18ef6b0c&");
 
 
 /***/ }),
@@ -24027,6 +24088,332 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/components/frontEnd/Resume/index.vue?vue&type=template&id=18ef6b0c&":
+/*!******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/components/frontEnd/Resume/index.vue?vue&type=template&id=18ef6b0c& ***!
+  \******************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("main", { staticClass: "container-fluid" }, [
+      _c("section", { staticClass: "row text-center mb-5" }, [
+        _c("span", { staticClass: "display-3 fw-bolder" }, [_vm._v("Resume")]),
+        _vm._v(" "),
+        _c("hr", { staticClass: "border-bottom border-success mb-5" }),
+      ]),
+      _vm._v(" "),
+      _c("section", { staticClass: "container" }, [
+        _c("div", { staticClass: "row text-center mb-3" }, [
+          _c("h3", { staticClass: "fw-bolder" }, [_vm._v("Certificates")]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-6 my-2 my-md-1" }, [
+            _c("div", { staticClass: "card" }, [
+              _c("div", { staticClass: "card-header text-center" }, [
+                _c("figure", { staticClass: "text-center m-0" }, [
+                  _c("blockquote", { staticClass: "blockquote m-0" }, [
+                    _c("h4", { staticClass: "card-title fw-bolder" }, [
+                      _vm._v(
+                        "\n                  Secondary School Certificate\n                "
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("figcaption", { staticClass: "blockquote-footer m-0" }, [
+                    _c("span", [_vm._v("Trinity High School")]),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("p", { staticClass: "text-justify" }, [
+                  _vm._v(
+                    "\n              I was awesome at arts, and feel the charm of existence in this\n              spot, which was created for the bliss of souls like mine. I am\n              so happy.\n            "
+                  ),
+                ]),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-6 my-2 my-md-1" }, [
+            _c("div", { staticClass: "card" }, [
+              _c("div", { staticClass: "card-header text-center" }, [
+                _c("figure", { staticClass: "text-center m-0" }, [
+                  _c("blockquote", { staticClass: "blockquote m-0" }, [
+                    _c("h4", { staticClass: "card-title fw-bolder" }, [
+                      _vm._v(
+                        "\n                  Secondary School Certificate\n                "
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("figcaption", { staticClass: "blockquote-footer m-0" }, [
+                    _c("span", [_vm._v("Trinity High School")]),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("p", { staticClass: "text-justify" }, [
+                  _vm._v(
+                    "\n              I was awesome at arts, and feel the charm of existence in this\n              spot, which was created for the bliss of souls like mine. I am\n              so happy.\n            "
+                  ),
+                ]),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-6 my-2 my-md-1" }, [
+            _c("div", { staticClass: "card" }, [
+              _c("div", { staticClass: "card-header text-center" }, [
+                _c("figure", { staticClass: "text-center m-0" }, [
+                  _c("blockquote", { staticClass: "blockquote m-0" }, [
+                    _c("h4", { staticClass: "card-title fw-bolder" }, [
+                      _vm._v(
+                        "\n                  Secondary School Certificate\n                "
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("figcaption", { staticClass: "blockquote-footer m-0" }, [
+                    _c("span", [_vm._v("Trinity High School")]),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("p", { staticClass: "text-justify" }, [
+                  _vm._v(
+                    "\n              I was awesome at arts, and feel the charm of existence in this\n              spot, which was created for the bliss of souls like mine. I am\n              so happy.\n            "
+                  ),
+                ]),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-6 my-2 my-md-1" }, [
+            _c("div", { staticClass: "card" }, [
+              _c("div", { staticClass: "card-header text-center" }, [
+                _c("figure", { staticClass: "text-center m-0" }, [
+                  _c("blockquote", { staticClass: "blockquote m-0" }, [
+                    _c("h4", { staticClass: "card-title fw-bolder" }, [
+                      _vm._v(
+                        "\n                  Secondary School Certificate\n                "
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("figcaption", { staticClass: "blockquote-footer m-0" }, [
+                    _c("span", [_vm._v("Trinity High School")]),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("p", { staticClass: "text-justify" }, [
+                  _vm._v(
+                    "\n              I was awesome at arts, and feel the charm of existence in this\n              spot, which was created for the bliss of souls like mine. I am\n              so happy.\n            "
+                  ),
+                ]),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-6 my-2 my-md-1" }, [
+            _c("div", { staticClass: "card" }, [
+              _c("div", { staticClass: "card-header text-center" }, [
+                _c("figure", { staticClass: "text-center m-0" }, [
+                  _c("blockquote", { staticClass: "blockquote m-0" }, [
+                    _c("h4", { staticClass: "card-title fw-bolder" }, [
+                      _vm._v(
+                        "\n                  Secondary School Certificate\n                "
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("figcaption", { staticClass: "blockquote-footer m-0" }, [
+                    _c("span", [_vm._v("Trinity High School")]),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("p", { staticClass: "text-justify" }, [
+                  _vm._v(
+                    "\n              I was awesome at arts, and feel the charm of existence in this\n              spot, which was created for the bliss of souls like mine. I am\n              so happy.\n            "
+                  ),
+                ]),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-6 my-2 my-md-1" }, [
+            _c("div", { staticClass: "card" }, [
+              _c("div", { staticClass: "card-header text-center" }, [
+                _c("figure", { staticClass: "text-center m-0" }, [
+                  _c("blockquote", { staticClass: "blockquote m-0" }, [
+                    _c("h4", { staticClass: "card-title fw-bolder" }, [
+                      _vm._v(
+                        "\n                  Secondary School Certificate\n                "
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("figcaption", { staticClass: "blockquote-footer m-0" }, [
+                    _c("span", [_vm._v("Trinity High School")]),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("p", { staticClass: "text-justify" }, [
+                  _vm._v(
+                    "\n              I was awesome at arts, and feel the charm of existence in this\n              spot, which was created for the bliss of souls like mine. I am\n              so happy.\n            "
+                  ),
+                ]),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-6 my-2 my-md-1" }, [
+            _c("div", { staticClass: "card" }, [
+              _c("div", { staticClass: "card-header text-center" }, [
+                _c("figure", { staticClass: "text-center m-0" }, [
+                  _c("blockquote", { staticClass: "blockquote m-0" }, [
+                    _c("h4", { staticClass: "card-title fw-bolder" }, [
+                      _vm._v(
+                        "\n                  Secondary School Certificate\n                "
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("figcaption", { staticClass: "blockquote-footer m-0" }, [
+                    _c("span", [_vm._v("Trinity High School")]),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("p", { staticClass: "text-justify" }, [
+                  _vm._v(
+                    "\n              I was awesome at arts, and feel the charm of existence in this\n              spot, which was created for the bliss of souls like mine. I am\n              so happy.\n            "
+                  ),
+                ]),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-6 my-2 my-md-1" }, [
+            _c("div", { staticClass: "card" }, [
+              _c("div", { staticClass: "card-header text-center" }, [
+                _c("figure", { staticClass: "text-center m-0" }, [
+                  _c("blockquote", { staticClass: "blockquote m-0" }, [
+                    _c("h4", { staticClass: "card-title fw-bolder" }, [
+                      _vm._v(
+                        "\n                  Secondary School Certificate\n                "
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("figcaption", { staticClass: "blockquote-footer m-0" }, [
+                    _c("span", [_vm._v("Trinity High School")]),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("p", { staticClass: "text-justify" }, [
+                  _vm._v(
+                    "\n              I was awesome at arts, and feel the charm of existence in this\n              spot, which was created for the bliss of souls like mine. I am\n              so happy.\n            "
+                  ),
+                ]),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-6 my-2 my-md-1" }, [
+            _c("div", { staticClass: "card" }, [
+              _c("div", { staticClass: "card-header text-center" }, [
+                _c("figure", { staticClass: "text-center m-0" }, [
+                  _c("blockquote", { staticClass: "blockquote m-0" }, [
+                    _c("h4", { staticClass: "card-title fw-bolder" }, [
+                      _vm._v(
+                        "\n                  Secondary School Certificate\n                "
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("figcaption", { staticClass: "blockquote-footer m-0" }, [
+                    _c("span", [_vm._v("Trinity High School")]),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("p", { staticClass: "text-justify" }, [
+                  _vm._v(
+                    "\n              I was awesome at arts, and feel the charm of existence in this\n              spot, which was created for the bliss of souls like mine. I am\n              so happy.\n            "
+                  ),
+                ]),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-6 my-2 my-md-1" }, [
+            _c("div", { staticClass: "card" }, [
+              _c("div", { staticClass: "card-header text-center" }, [
+                _c("figure", { staticClass: "text-center m-0" }, [
+                  _c("blockquote", { staticClass: "blockquote m-0" }, [
+                    _c("h4", { staticClass: "card-title fw-bolder" }, [
+                      _vm._v(
+                        "\n                  Secondary School Certificate\n                "
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("figcaption", { staticClass: "blockquote-footer m-0" }, [
+                    _c("span", [_vm._v("Trinity High School")]),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("p", { staticClass: "text-justify" }, [
+                  _vm._v(
+                    "\n              I was awesome at arts, and feel the charm of existence in this\n              spot, which was created for the bliss of souls like mine. I am\n              so happy.\n            "
+                  ),
+                ]),
+              ]),
+            ]),
+          ]),
+        ]),
+      ]),
+    ])
+  },
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/components/frontEnd/master/includes/Footer.vue?vue&type=template&id=7e609b64&":
 /*!****************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/components/frontEnd/master/includes/Footer.vue?vue&type=template&id=7e609b64& ***!
@@ -24240,11 +24627,26 @@ var render = function () {
               1
             ),
             _vm._v(" "),
+            _c(
+              "li",
+              { staticClass: "nav-item" },
+              [
+                _c(
+                  "router-link",
+                  {
+                    staticClass: "nav-link",
+                    class: _vm.$route.name === "fResume" ? "active" : "",
+                    attrs: { to: { name: "fResume" } },
+                  },
+                  [_vm._v("Resume")]
+                ),
+              ],
+              1
+            ),
+            _vm._v(" "),
             _vm._m(1),
             _vm._v(" "),
             _vm._m(2),
-            _vm._v(" "),
-            _vm._m(3),
           ]),
         ]
       ),
@@ -24269,16 +24671,6 @@ var staticRenderFns = [
       },
       [_c("span", { staticClass: "navbar-toggler-icon" })]
     )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "nav-item" }, [
-      _c("a", { staticClass: "nav-link", attrs: { href: "resume.html" } }, [
-        _vm._v("Resume"),
-      ]),
-    ])
   },
   function () {
     var _vm = this
