@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\AboutController;
-use App\Http\Controllers\BackEndHomeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ResumeController;
@@ -13,9 +12,9 @@ Route::get('/about' , [AboutController::class,'index']);
 Route::get('/resume' , [ResumeController::class,'index']);
 Route::get('/skills' , [SkillController::class,'index']);
 Route::get('/contact' , [ContactController::class,'index']);
-Route::get('/admin' , [BackEndHomeController::class,'index']);
-Route::get('/homepage' , [BackEndHomeController::class,'index']);
-Route::get('/add-home' , [BackEndHomeController::class,'index']);
+Route::get('/admin' , [HomeController::class,'adminHome']);
+Route::get('/homepage' , [HomeController::class,'adminHome']);
+Route::get('/add-home' , [HomeController::class,'adminHome']);
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
