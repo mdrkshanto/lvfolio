@@ -7,9 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="{{ asset('frontEnd/assets/img/me.webp') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('backEnd/assets/dist/css/adminlte.min.css') }}">
 </head>
 
-<body>
+<body class="hold-transition sidebar-mini">
     <div id="app">
         <Admin />
     </div>
