@@ -13,8 +13,8 @@ Route::get('/resume' , [ResumeController::class,'index']);
 Route::get('/skills' , [SkillController::class,'index']);
 Route::get('/contact' , [ContactController::class,'index']);
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
