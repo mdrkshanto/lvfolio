@@ -16,6 +16,7 @@ Route::get('/admin' , [HomeController::class,'adminHome']);
 Route::get('/homepage' , [HomeController::class,'adminHome']);
 Route::get('/add-home' , [HomeController::class,'adminHome']);
 
+
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth'])->name('dashboard');
