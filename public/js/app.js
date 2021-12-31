@@ -5550,12 +5550,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "routes": () => (/* binding */ routes)
 /* harmony export */ });
 /* harmony import */ var _components_frontEnd_Home_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/frontEnd/Home/index */ "./resources/components/frontEnd/Home/index.vue");
+/* harmony import */ var _components_frontEnd_About_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/frontEnd/About/index */ "./resources/components/frontEnd/About/index.vue");
+
 
 var routes = [{
   path: '/',
   name: 'fHome',
   meta: 'Home',
   component: _components_frontEnd_Home_index__WEBPACK_IMPORTED_MODULE_0__["default"]
+}, {
+  path: '/about',
+  name: 'fAbout',
+  meta: 'About',
+  component: _components_frontEnd_About_index__WEBPACK_IMPORTED_MODULE_1__["default"]
 }];
 
 /***/ }),
@@ -23417,6 +23424,43 @@ module.exports = function (list, options) {
 
 /***/ }),
 
+/***/ "./resources/components/frontEnd/About/index.vue":
+/*!*******************************************************!*\
+  !*** ./resources/components/frontEnd/About/index.vue ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _index_vue_vue_type_template_id_61c95de4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.vue?vue&type=template&id=61c95de4& */ "./resources/components/frontEnd/About/index.vue?vue&type=template&id=61c95de4&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  script,
+  _index_vue_vue_type_template_id_61c95de4___WEBPACK_IMPORTED_MODULE_0__.render,
+  _index_vue_vue_type_template_id_61c95de4___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/components/frontEnd/About/index.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/components/frontEnd/Home/index.vue":
 /*!******************************************************!*\
   !*** ./resources/components/frontEnd/Home/index.vue ***!
@@ -23635,6 +23679,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/components/frontEnd/About/index.vue?vue&type=template&id=61c95de4&":
+/*!**************************************************************************************!*\
+  !*** ./resources/components/frontEnd/About/index.vue?vue&type=template&id=61c95de4& ***!
+  \**************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_template_id_61c95de4___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_template_id_61c95de4___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_template_id_61c95de4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./index.vue?vue&type=template&id=61c95de4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/components/frontEnd/About/index.vue?vue&type=template&id=61c95de4&");
+
+
+/***/ }),
+
 /***/ "./resources/components/frontEnd/Home/index.vue?vue&type=template&id=c0a7db84&scoped=true&":
 /*!*************************************************************************************************!*\
   !*** ./resources/components/frontEnd/Home/index.vue?vue&type=template&id=c0a7db84&scoped=true& ***!
@@ -23716,6 +23777,189 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_template_id_411dea3e___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_template_id_411dea3e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./index.vue?vue&type=template&id=411dea3e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/components/frontEnd/master/index.vue?vue&type=template&id=411dea3e&");
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/components/frontEnd/About/index.vue?vue&type=template&id=61c95de4&":
+/*!*****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/components/frontEnd/About/index.vue?vue&type=template&id=61c95de4& ***!
+  \*****************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("main", { staticClass: "container-fluid" }, [
+      _c("section", { staticClass: "row text-center mb-5" }, [
+        _c("span", { staticClass: "display-3 fw-bolder" }, [
+          _vm._v("About Me"),
+        ]),
+        _vm._v(" "),
+        _c("hr", { staticClass: "border-bottom border-success mb-5" }),
+      ]),
+      _vm._v(" "),
+      _c("section", { staticClass: "container" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-8 order-md-first order-last" }, [
+            _c("article", { staticClass: "my-3" }, [
+              _c("h3", { staticClass: "fw-bolder my-3" }, [
+                _vm._v("Objective"),
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "text-justify" }, [
+                _vm._v(
+                  "\n            An opportunity to work and upgrade oneself, as well as being\n            involved in an organization that believes in gaining a competitive\n            edge and giving back to the community. I'm presently expanding my\n            solid experience in UI / UX design. I focus on using my\n            interpersonal skills to build good user experience and create a\n            strong interest in my employers. I hope to develop skills in\n            motion design and my knowledge of the Web, and become an honest\n            asset to the business. As an individual, I'm self-confident you'll\n            find me creative, funny and naturally passionate. I'm a forward\n            thinker, which others may find inspiring when working as a team.\n          "
+                ),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("article", { staticClass: "my-3" }, [
+              _c("h3", { staticClass: "fw-bolder my-3" }, [
+                _vm._v("What I Do ?"),
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "text-justify" }, [
+                _vm._v(
+                  "\n            I have been working as a web interface designer since. I have a\n            love of clean, elegant styling, and I have lots of experience in\n            the production of CSS3 and HTML5 for modern websites. I loving\n            creating awesome as per my client's need. I think user experience\n            when I try to craft something for my clients. Making a design\n            awesome.\n          "
+                ),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-md-6 my-2" }, [
+                  _c("span", { staticClass: "fw-bolder lead" }, [
+                    _vm._v("User Experience Design"),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-6 my-2" }, [
+                  _c("span", { staticClass: "fw-bolder lead" }, [
+                    _vm._v("Interface Design"),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-6 my-2" }, [
+                  _c("span", { staticClass: "fw-bolder lead" }, [
+                    _vm._v("Product Design"),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-6 my-2" }, [
+                  _c("span", { staticClass: "fw-bolder lead" }, [
+                    _vm._v("Branding Design"),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-6 my-2" }, [
+                  _c("span", { staticClass: "fw-bolder lead" }, [
+                    _vm._v("Digital Painting"),
+                  ]),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "d-flex justify-content-center mt-5" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-success shadow-none btn-lg opacity-75",
+                },
+                [
+                  _c("i", { staticClass: "fas fa-download" }),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "ms-2" }, [
+                    _vm._v("Download my CV"),
+                  ]),
+                ]
+              ),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-4 order-md-last order-first" }, [
+            _c("div", { staticClass: "card w-100" }, [
+              _c("img", {
+                staticClass: "card-img-top img-fluid",
+                attrs: { src: "frontEnd/assets/img/me.webp" },
+              }),
+              _vm._v(" "),
+              _c("ul", { staticClass: "list-group list-group-flush" }, [
+                _c("li", { staticClass: "list-group-item" }, [
+                  _c("span", { staticClass: "fw-bolder" }, [_vm._v("Name:")]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "card-text" }, [
+                    _vm._v("Md Rezaul Karim Shanto"),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("li", { staticClass: "list-group-item" }, [
+                  _c("span", { staticClass: "fw-bolder" }, [
+                    _vm._v("Date of birth:"),
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "card-text" }, [
+                    _vm._v("09 March 1990"),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("li", { staticClass: "list-group-item" }, [
+                  _c("span", { staticClass: "fw-bolder" }, [
+                    _vm._v("Address:"),
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "card-text" }, [
+                    _vm._v("North Badda, Badda, Dhaka-1212"),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("li", { staticClass: "list-group-item" }, [
+                  _c("span", { staticClass: "fw-bolder" }, [
+                    _vm._v("Nationality:"),
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "card-text" }, [
+                    _vm._v("Bangladeshi (By Birth)"),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("li", { staticClass: "list-group-item" }, [
+                  _c("span", { staticClass: "fw-bolder" }, [_vm._v("Phone:")]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "card-text" }, [
+                    _vm._v("(+88) 01978167206"),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("li", { staticClass: "list-group-item" }, [
+                  _c("span", { staticClass: "fw-bolder" }, [_vm._v("Email:")]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "card-text" }, [
+                    _vm._v("bdshanto@outlook.com"),
+                  ]),
+                ]),
+              ]),
+            ]),
+          ]),
+        ]),
+      ]),
+    ])
+  },
+]
+render._withStripped = true
+
 
 
 /***/ }),
@@ -23940,7 +24184,73 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c(
+    "nav",
+    {
+      staticClass:
+        "navbar navbar-expand-md navbar-dark bg-black sticky-top py-0",
+    },
+    [
+      _c(
+        "router-link",
+        { staticClass: "navbar-brand", attrs: { to: { name: "fHome" } } },
+        [_vm._v("Md Rezaul Karim Shanto")]
+      ),
+      _vm._v(" "),
+      _vm._m(0),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "navbar-collapse collapse mainMenu justify-content-end",
+        },
+        [
+          _c("ul", { staticClass: "navbar-nav align-items-center" }, [
+            _c(
+              "li",
+              { staticClass: "nav-item" },
+              [
+                _c(
+                  "router-link",
+                  {
+                    staticClass: "nav-link",
+                    class: _vm.$route.name === "fHome" ? "active" : "",
+                    attrs: { to: { name: "fHome" } },
+                  },
+                  [_vm._v("Home")]
+                ),
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "li",
+              { staticClass: "nav-item" },
+              [
+                _c(
+                  "router-link",
+                  {
+                    staticClass: "nav-link",
+                    class: _vm.$route.name === "fAbout" ? "active" : "",
+                    attrs: { to: { name: "fAbout" } },
+                  },
+                  [_vm._v("About")]
+                ),
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _vm._m(1),
+            _vm._v(" "),
+            _vm._m(2),
+            _vm._v(" "),
+            _vm._m(3),
+          ]),
+        ]
+      ),
+    ],
+    1
+  )
 }
 var staticRenderFns = [
   function () {
@@ -23948,86 +24258,47 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c(
-      "nav",
+      "button",
       {
-        staticClass:
-          "navbar navbar-expand-md navbar-dark bg-black sticky-top py-0",
+        staticClass: "navbar-toggler shadow-none",
+        attrs: {
+          type: "button",
+          "data-bs-toggle": "collapse",
+          "data-bs-target": ".mainMenu",
+        },
       },
-      [
-        _c(
-          "a",
-          { staticClass: "navbar-brand", attrs: { href: "index.html" } },
-          [_vm._v("Md Rezaul Karim Shanto")]
-        ),
-        _vm._v(" "),
-        _c(
-          "button",
-          {
-            staticClass: "navbar-toggler shadow-none",
-            attrs: {
-              type: "button",
-              "data-bs-toggle": "collapse",
-              "data-bs-target": ".mainMenu",
-            },
-          },
-          [_c("span", { staticClass: "navbar-toggler-icon" })]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "navbar-collapse collapse mainMenu justify-content-end",
-          },
-          [
-            _c("ul", { staticClass: "navbar-nav align-items-center" }, [
-              _c("li", { staticClass: "nav-item" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass: "nav-link active",
-                    attrs: { href: "index.html" },
-                  },
-                  [_vm._v("Home")]
-                ),
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "nav-item" }, [
-                _c(
-                  "a",
-                  { staticClass: "nav-link", attrs: { href: "about.html" } },
-                  [_vm._v("About")]
-                ),
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "nav-item" }, [
-                _c(
-                  "a",
-                  { staticClass: "nav-link", attrs: { href: "resume.html" } },
-                  [_vm._v("Resume")]
-                ),
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "nav-item" }, [
-                _c(
-                  "a",
-                  { staticClass: "nav-link", attrs: { href: "skills.html" } },
-                  [_vm._v("Skills")]
-                ),
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "nav-item" }, [
-                _c(
-                  "a",
-                  { staticClass: "nav-link", attrs: { href: "contact.html" } },
-                  [_vm._v("Contact")]
-                ),
-              ]),
-            ]),
-          ]
-        ),
-      ]
+      [_c("span", { staticClass: "navbar-toggler-icon" })]
     )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "nav-item" }, [
+      _c("a", { staticClass: "nav-link", attrs: { href: "resume.html" } }, [
+        _vm._v("Resume"),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "nav-item" }, [
+      _c("a", { staticClass: "nav-link", attrs: { href: "skills.html" } }, [
+        _vm._v("Skills"),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "nav-item" }, [
+      _c("a", { staticClass: "nav-link", attrs: { href: "contact.html" } }, [
+        _vm._v("Contact"),
+      ]),
+    ])
   },
 ]
 render._withStripped = true

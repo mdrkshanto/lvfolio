@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar navbar-expand-md navbar-dark bg-black sticky-top py-0">
-    <a href="index.html" class="navbar-brand">Md Rezaul Karim Shanto</a>
+    <router-link :to="{name:'fHome'}" class="navbar-brand">Md Rezaul Karim Shanto</router-link>
     <button
       class="navbar-toggler shadow-none"
       type="button"
@@ -12,10 +12,10 @@
     <div class="navbar-collapse collapse mainMenu justify-content-end">
       <ul class="navbar-nav align-items-center">
         <li class="nav-item">
-          <a href="index.html" class="nav-link active">Home</a>
+          <router-link :to="{name:'fHome'}" class="nav-link" :class="$route.name === 'fHome'?'active':''">Home</router-link>
         </li>
         <li class="nav-item">
-          <a href="about.html" class="nav-link">About</a>
+          <router-link :to="{name:'fAbout'}" class="nav-link" :class="$route.name === 'fAbout'?'active':''">About</router-link>
         </li>
         <li class="nav-item">
           <a href="resume.html" class="nav-link">Resume</a>
