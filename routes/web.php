@@ -12,6 +12,9 @@ Route::get('/about' , [AboutController::class,'index']);
 Route::get('/resume' , [ResumeController::class,'index']);
 Route::get('/skills' , [SkillController::class,'index']);
 Route::get('/contact' , [ContactController::class,'index']);
+Route::get('/admin' , function(){
+    return view('admin');
+});
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');

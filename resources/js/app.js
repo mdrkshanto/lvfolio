@@ -1,6 +1,7 @@
 require('./bootstrap');
 
 Vue.component('Users', require('../components/frontEnd/master/index').default)
+Vue.component('Admin', require('../components/backEnd/master/index').default)
 
 
 

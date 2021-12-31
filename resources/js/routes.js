@@ -34,4 +34,10 @@ export const routes = [
         meta: 'Contact',
         component: fContact
     },
+    {
+        path: '/admin',
+        name: 'admin',
+        meta: 'Login',
+        // component: Admin
+    },
 ]
