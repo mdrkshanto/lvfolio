@@ -1,13 +1,5 @@
 require('./bootstrap');
 
-import Alpine from 'alpinejs';
-
-window.Alpine = Alpine;
-
-Alpine.start();
-
-
-
 Vue.component('Users', require('../components/frontEnd/master/index').default)
 
 
