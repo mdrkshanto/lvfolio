@@ -6,8 +6,6 @@ try {
     window.Vue = require('vue/dist/vue')
     window.VueRouter = require('vue-router/dist/vue-router')
     // window.Vuex = require("vuex/dist/vuex");
-    require('../../public/backEnd/assets/dist/js/adminlte.min')
-    require('../../public/backEnd/assets/dist/js/demo')
 } catch (error) { }
 
 window.axios = require('axios');

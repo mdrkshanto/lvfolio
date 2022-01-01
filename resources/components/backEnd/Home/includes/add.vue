@@ -40,8 +40,8 @@
               <option selected :value="bgOpacities.title">
                 Select background transparency
               </option>
-              <option>Select background color</option>
-              <option>Select background color</option>
+              <option :value="bgOpacities.red">Select background color</option>
+              <option :value="bgOpacities.blue">Select background color</option>
             </select>
           </div>
         </div>
@@ -62,7 +62,7 @@
             class="form-control form-control-sm"
             type="text"
             placeholder="Focus Title"
-            v-model="focusTitle"
+            v-model="form.focusTitle"
           />
         </div>
 
@@ -71,15 +71,40 @@
           <textarea
             class="form-control form-control-sm"
             placeholder="Short Description"
-            v-model="shortDescription"
+            v-model="form.shortDescription"
           />
         </div>
       </div>
     </div>
-    <div class="card-footer">
+    <div
+      class="card-footer"
+      v-if="
+        form.bgImg &&
+        form.bgColor &&
+        form.bgOpacity &&
+        form.name &&
+        form.focusTitle &&
+        form.shortDescription !== null &&
+        form.bgImg &&
+        form.bgColor &&
+        form.bgOpacity &&
+        form.name &&
+        form.focusTitle &&
+        form.shortDescription !== '' &&
+        form.bgImg &&
+        form.bgColor &&
+        form.bgOpacity &&
+        form.name &&
+        form.focusTitle &&
+        form.shortDescription !== 0
+      "
+    >
       <div class="row justify-content-between">
         <button class="col-1 btn btn-success btn-sm shadow-none">Submit</button>
-        <button class="col-1 btn btn-secondary btn-sm shadow-none" @click.prevent="reset">
+        <button
+          class="col-1 btn btn-secondary btn-sm shadow-none"
+          @click.prevent="reset"
+        >
           Reset
         </button>
       </div>
