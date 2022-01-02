@@ -5,7 +5,6 @@ try {
     require('bootstrap/dist/js/bootstrap.bundle.min')
     window.Vue = require('vue/dist/vue')
     window.VueRouter = require('vue-router/dist/vue-router')
-    // window.Vuex = require("vuex/dist/vuex");
 } catch (error) { }
 
 window.axios = require('axios');

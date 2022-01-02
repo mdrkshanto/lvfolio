@@ -2176,25 +2176,71 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      bgColors: {
-        title: 0,
-        red: "red",
-        blue: "blue"
-      },
-      bgOpacities: {
-        title: 0,
-        red: "red",
-        blue: "blue"
-      },
+      // bgColors: {
+      //   title: 0,
+      //   blue: "primary",
+      //   gray: "secondary",
+      //   green: "success",
+      //   red: "danger",
+      //   yellow: "warning ",
+      //   sky: "info",
+      //   white: "light",
+      //   black: "dark",
+      // },
+      bgColors: [{
+        Value: null,
+        text: "Select Background Color"
+      }, {
+        Value: "primary",
+        text: "Blue"
+      }, {
+        Value: "secondary",
+        text: "Gray"
+      }, {
+        Value: "success",
+        text: "Green"
+      }, {
+        Value: "danger",
+        text: "Red"
+      }, {
+        Value: "warning",
+        text: "Yellow"
+      }, {
+        Value: "info",
+        text: "Sky"
+      }, {
+        Value: "light",
+        text: "White"
+      }, {
+        Value: "dark",
+        text: "Black"
+      }],
+      bgOpacities: [{
+        value: null,
+        text: "Select Opacity"
+      }, {
+        value: 0,
+        text: "0%"
+      }, {
+        value: 25,
+        text: "25%"
+      }, {
+        value: 50,
+        text: "50%"
+      }, {
+        value: 75,
+        text: "75%"
+      }, {
+        value: 100,
+        text: "100%"
+      }],
       form: new Form({
         bgImg: null,
-        bgColor: 0,
-        bgOpacity: 0,
+        bgColor: null,
+        bgOpacity: null,
         name: null,
         focusTitle: null,
         shortDescription: null
@@ -2207,8 +2253,8 @@ __webpack_require__.r(__webpack_exports__);
     },
     reset: function reset() {
       this.form.bgImg = null;
-      this.form.bgColor = 0;
-      this.form.bgOpacity = 0;
+      this.form.bgColor = null;
+      this.form.bgOpacity = null;
       this.form.name = null;
       this.form.focusTitle = null;
       this.form.shortDescription = null;
@@ -2375,7 +2421,7 @@ try {
   __webpack_require__(/*! bootstrap/dist/js/bootstrap.bundle.min */ "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js");
 
   window.Vue = __webpack_require__(/*! vue/dist/vue */ "./node_modules/vue/dist/vue.js");
-  window.VueRouter = __webpack_require__(/*! vue-router/dist/vue-router */ "./node_modules/vue-router/dist/vue-router.js"); // window.Vuex = require("vuex/dist/vuex");
+  window.VueRouter = __webpack_require__(/*! vue-router/dist/vue-router */ "./node_modules/vue-router/dist/vue-router.js");
 } catch (error) {}
 
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
@@ -21793,28 +21839,20 @@ var render = function () {
                   },
                 },
               },
-              [
-                _c(
+              _vm._l(_vm.bgColors, function (bgColor) {
+                return _c(
                   "option",
-                  {
-                    attrs: { selected: "" },
-                    domProps: { value: _vm.bgColors.title },
-                  },
+                  { key: bgColor.Value, domProps: { value: bgColor.Value } },
                   [
                     _vm._v(
-                      "\n              Select background color\n            "
+                      "\n              " +
+                        _vm._s(bgColor.text) +
+                        "\n            "
                     ),
                   ]
-                ),
-                _vm._v(" "),
-                _c("option", { domProps: { value: _vm.bgColors.red } }, [
-                  _vm._v("Red"),
-                ]),
-                _vm._v(" "),
-                _c("option", { domProps: { value: _vm.bgColors.blue } }, [
-                  _vm._v("Blue"),
-                ]),
-              ]
+                )
+              }),
+              0
             ),
             _vm._v(" "),
             _c(
@@ -21848,28 +21886,17 @@ var render = function () {
                   },
                 },
               },
-              [
-                _c(
+              _vm._l(_vm.bgOpacities, function (bgOpacity) {
+                return _c(
                   "option",
                   {
-                    attrs: { selected: "" },
-                    domProps: { value: _vm.bgOpacities.title },
+                    key: bgOpacity.value,
+                    domProps: { value: bgOpacity.value },
                   },
-                  [
-                    _vm._v(
-                      "\n              Select background transparency\n            "
-                    ),
-                  ]
-                ),
-                _vm._v(" "),
-                _c("option", { domProps: { value: _vm.bgOpacities.red } }, [
-                  _vm._v("Select background color"),
-                ]),
-                _vm._v(" "),
-                _c("option", { domProps: { value: _vm.bgOpacities.blue } }, [
-                  _vm._v("Select background color"),
-                ]),
-              ]
+                  [_vm._v(_vm._s(bgOpacity.text))]
+                )
+              }),
+              0
             ),
           ]),
         ]),

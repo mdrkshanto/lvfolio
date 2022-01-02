@@ -27,21 +27,19 @@
               class="form-select form-select-sm text-center shadow-none"
               v-model="form.bgColor"
             >
-              <option selected :value="bgColors.title">
-                Select background color
+              <option
+                v-for="bgColor in bgColors"
+                :value="bgColor.Value"
+                :key="bgColor.Value"
+              >
+                {{ bgColor.text }}
               </option>
-              <option :value="bgColors.red">Red</option>
-              <option :value="bgColors.blue">Blue</option>
             </select>
             <select
               class="form-select form-select-sm text-center shadow-none"
               v-model="form.bgOpacity"
             >
-              <option selected :value="bgOpacities.title">
-                Select background transparency
-              </option>
-              <option :value="bgOpacities.red">Select background color</option>
-              <option :value="bgOpacities.blue">Select background color</option>
+              <option v-for="bgOpacity in bgOpacities" :key="bgOpacity.value" :value="bgOpacity.value">{{ bgOpacity.text }}</option>
             </select>
           </div>
         </div>
@@ -115,20 +113,40 @@
 export default {
   data() {
     return {
-      bgColors: {
-        title: 0,
-        red: "red",
-        blue: "blue",
-      },
-      bgOpacities: {
-        title: 0,
-        red: "red",
-        blue: "blue",
-      },
+        // bgColors: {
+        //   title: 0,
+        //   blue: "primary",
+        //   gray: "secondary",
+        //   green: "success",
+        //   red: "danger",
+        //   yellow: "warning ",
+        //   sky: "info",
+        //   white: "light",
+        //   black: "dark",
+        // },
+      bgColors: [
+        { Value: null, text: "Select Background Color" },
+        { Value: "primary", text: "Blue" },
+        { Value: "secondary", text: "Gray" },
+        { Value: "success", text: "Green" },
+        { Value: "danger", text: "Red" },
+        { Value: "warning", text: "Yellow" },
+        { Value: "info", text: "Sky" },
+        { Value: "light", text: "White" },
+        { Value: "dark", text: "Black" },
+      ],
+      bgOpacities: [
+        {value: null, text: "Select Opacity"},
+        {value: 0, text: "0%"},
+        {value: 25, text: "25%"},
+        {value: 50, text: "50%"},
+        {value: 75, text: "75%"},
+        {value: 100, text: "100%"},
+      ],
       form: new Form({
         bgImg: null,
-        bgColor: 0,
-        bgOpacity: 0,
+        bgColor: null,
+        bgOpacity: null,
         name: null,
         focusTitle: null,
         shortDescription: null,
@@ -141,8 +159,8 @@ export default {
     },
     reset() {
       this.form.bgImg = null;
-      this.form.bgColor = 0;
-      this.form.bgOpacity = 0;
+      this.form.bgColor = null;
+      this.form.bgOpacity = null;
       this.form.name = null;
       this.form.focusTitle = null;
       this.form.shortDescription = null;
