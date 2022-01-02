@@ -2170,12 +2170,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -2192,7 +2186,7 @@ __webpack_require__.r(__webpack_exports__);
       // },
       bgColors: [{
         Value: null,
-        text: "Select Background Color"
+        text: "Background Color"
       }, {
         Value: "primary",
         text: "Blue"
@@ -2220,21 +2214,21 @@ __webpack_require__.r(__webpack_exports__);
       }],
       bgOpacities: [{
         value: null,
-        text: "Select Opacity"
+        text: "Opacity"
       }, {
-        value: 0,
+        value: "0",
         text: "0%"
       }, {
-        value: 25,
+        value: "25",
         text: "25%"
       }, {
-        value: 50,
+        value: "50",
         text: "50%"
       }, {
-        value: 75,
+        value: "75",
         text: "75%"
       }, {
-        value: 100,
+        value: "100",
         text: "100%"
       }],
       form: new Form({
@@ -21994,13 +21988,7 @@ var render = function () {
     _vm.form.bgOpacity &&
     _vm.form.name &&
     _vm.form.focusTitle &&
-    _vm.form.shortDescription !== "" &&
-    _vm.form.bgImg &&
-    _vm.form.bgColor &&
-    _vm.form.bgOpacity &&
-    _vm.form.name &&
-    _vm.form.focusTitle &&
-    _vm.form.shortDescription !== 0
+    _vm.form.shortDescription !== ""
       ? _c("div", { staticClass: "card-footer" }, [
           _c("div", { staticClass: "row justify-content-between" }, [
             _c(

@@ -88,13 +88,7 @@
         form.bgOpacity &&
         form.name &&
         form.focusTitle &&
-        form.shortDescription !== '' &&
-        form.bgImg &&
-        form.bgColor &&
-        form.bgOpacity &&
-        form.name &&
-        form.focusTitle &&
-        form.shortDescription !== 0
+        form.shortDescription !== ''
       "
     >
       <div class="row justify-content-between">
@@ -125,7 +119,7 @@ export default {
         //   black: "dark",
         // },
       bgColors: [
-        { Value: null, text: "Select Background Color" },
+        { Value: null, text: "Background Color" },
         { Value: "primary", text: "Blue" },
         { Value: "secondary", text: "Gray" },
         { Value: "success", text: "Green" },
@@ -136,12 +130,12 @@ export default {
         { Value: "dark", text: "Black" },
       ],
       bgOpacities: [
-        {value: null, text: "Select Opacity"},
-        {value: 0, text: "0%"},
-        {value: 25, text: "25%"},
-        {value: 50, text: "50%"},
-        {value: 75, text: "75%"},
-        {value: 100, text: "100%"},
+        {value: null, text: "Opacity"},
+        {value: "0", text: "0%"},
+        {value: "25", text: "25%"},
+        {value: "50", text: "50%"},
+        {value: "75", text: "75%"},
+        {value: "100", text: "100%"},
       ],
       form: new Form({
         bgImg: null,
