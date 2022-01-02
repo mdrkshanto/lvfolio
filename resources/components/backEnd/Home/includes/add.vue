@@ -107,17 +107,6 @@
 export default {
   data() {
     return {
-        // bgColors: {
-        //   title: 0,
-        //   blue: "primary",
-        //   gray: "secondary",
-        //   green: "success",
-        //   red: "danger",
-        //   yellow: "warning ",
-        //   sky: "info",
-        //   white: "light",
-        //   black: "dark",
-        // },
       bgColors: [
         { Value: null, text: "Background Color" },
         { Value: "primary", text: "Blue" },
@@ -127,7 +116,8 @@ export default {
         { Value: "warning", text: "Yellow" },
         { Value: "info", text: "Sky" },
         { Value: "light", text: "White" },
-        { Value: "dark", text: "Black" },
+        { Value: "dark", text: "Dark" },
+        { Value: "black", text: "Black" },
       ],
       bgOpacities: [
         {value: null, text: "Opacity"},

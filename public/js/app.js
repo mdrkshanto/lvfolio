@@ -2173,17 +2173,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      // bgColors: {
-      //   title: 0,
-      //   blue: "primary",
-      //   gray: "secondary",
-      //   green: "success",
-      //   red: "danger",
-      //   yellow: "warning ",
-      //   sky: "info",
-      //   white: "light",
-      //   black: "dark",
-      // },
       bgColors: [{
         Value: null,
         text: "Background Color"
@@ -2210,6 +2199,9 @@ __webpack_require__.r(__webpack_exports__);
         text: "White"
       }, {
         Value: "dark",
+        text: "Dark"
+      }, {
+        Value: "black",
         text: "Black"
       }],
       bgOpacities: [{
