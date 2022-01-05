@@ -65,6 +65,13 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  mounted() {
+    this.$store.dispatch("adminHomeData");
+  },
+};
+</script>
 <style scoped>
 main {
   height: 4rem;

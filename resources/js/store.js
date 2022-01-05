@@ -1,6 +1,12 @@
-export default{
+export default {
     state: {},
     getters: {},
-    actions: {},
+    actions: {
+        adminHomeData() {
+            axios.get('api/home-data').then((res) => {
+                console.log(res)
+            })
+        },
+    },
     mutations: {},
 }
