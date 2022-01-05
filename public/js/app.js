@@ -2170,6 +2170,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -2236,6 +2247,19 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     bgImg: function bgImg(event) {
       this.form.bgImg = event.target.files[0];
+    },
+    submit: function submit() {
+      var _this = this;
+
+      this.form.post("api/adHome").then(function () {
+        _this.form.bgImg = null;
+        _this.form.bgColor = null;
+        _this.form.bgOpacity = null;
+        _this.form.name = null;
+        _this.form.focusTitle = null;
+        _this.form.shortDescription = null;
+        _this.$refs.bgImg.value = null;
+      });
     },
     reset: function reset() {
       this.form.bgImg = null;
@@ -21879,7 +21903,13 @@ var render = function () {
                     key: bgOpacity.value,
                     domProps: { value: bgOpacity.value },
                   },
-                  [_vm._v(_vm._s(bgOpacity.text))]
+                  [
+                    _vm._v(
+                      "\n              " +
+                        _vm._s(bgOpacity.text) +
+                        "\n            "
+                    ),
+                  ]
                 )
               }),
               0
@@ -21985,8 +22015,16 @@ var render = function () {
           _c("div", { staticClass: "row justify-content-between" }, [
             _c(
               "button",
-              { staticClass: "col-1 btn btn-success btn-sm shadow-none" },
-              [_vm._v("Submit")]
+              {
+                staticClass: "col-1 btn btn-success btn-sm shadow-none",
+                on: {
+                  click: function ($event) {
+                    $event.preventDefault()
+                    return _vm.submit.apply(null, arguments)
+                  },
+                },
+              },
+              [_vm._v("\n        Submit\n      ")]
             ),
             _vm._v(" "),
             _c(

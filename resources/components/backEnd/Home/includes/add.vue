@@ -39,7 +39,13 @@
               class="form-select form-select-sm text-center shadow-none"
               v-model="form.bgOpacity"
             >
-              <option v-for="bgOpacity in bgOpacities" :key="bgOpacity.value" :value="bgOpacity.value">{{ bgOpacity.text }}</option>
+              <option
+                v-for="bgOpacity in bgOpacities"
+                :key="bgOpacity.value"
+                :value="bgOpacity.value"
+              >
+                {{ bgOpacity.text }}
+              </option>
             </select>
           </div>
         </div>
@@ -92,7 +98,12 @@
       "
     >
       <div class="row justify-content-between">
-        <button class="col-1 btn btn-success btn-sm shadow-none">Submit</button>
+        <button
+          class="col-1 btn btn-success btn-sm shadow-none"
+          @click.prevent="submit"
+        >
+          Submit
+        </button>
         <button
           class="col-1 btn btn-secondary btn-sm shadow-none"
           @click.prevent="reset"
@@ -120,12 +131,12 @@ export default {
         { Value: "black", text: "Black" },
       ],
       bgOpacities: [
-        {value: null, text: "Opacity"},
-        {value: "0", text: "0%"},
-        {value: "25", text: "25%"},
-        {value: "50", text: "50%"},
-        {value: "75", text: "75%"},
-        {value: "100", text: "100%"},
+        { value: null, text: "Opacity" },
+        { value: "0", text: "0%" },
+        { value: "25", text: "25%" },
+        { value: "50", text: "50%" },
+        { value: "75", text: "75%" },
+        { value: "100", text: "100%" },
       ],
       form: new Form({
         bgImg: null,
@@ -140,6 +151,17 @@ export default {
   methods: {
     bgImg(event) {
       this.form.bgImg = event.target.files[0];
+    },
+    submit() {
+      this.form.post("api/adHome").then(() => {
+        this.form.bgImg = null;
+        this.form.bgColor = null;
+        this.form.bgOpacity = null;
+        this.form.name = null;
+        this.form.focusTitle = null;
+        this.form.shortDescription = null;
+        this.$refs.bgImg.value = null;
+      });
     },
     reset() {
       this.form.bgImg = null;
