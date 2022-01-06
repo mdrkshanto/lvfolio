@@ -70,6 +70,7 @@ export default {
   mounted() {
     this.$store.dispatch("adminHomeData");
   },
+  
 };
 </script>
 <style scoped>
