@@ -2349,13 +2349,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   mounted: function mounted() {
     this.$store.dispatch("adminHomeData");
+  },
+  computed: {
+    data: function data() {
+      return this.$store.getters.adminHomeData;
+    }
   }
 });
 
@@ -2473,20 +2474,20 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vform__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vform */ "./node_modules/vform/dist/vform.es.js");
-/* harmony import */ var vuex_dist_vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex/dist/vuex */ "./node_modules/vuex/dist/vuex.common.js");
-/* harmony import */ var vuex_dist_vuex__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vuex_dist_vuex__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 /* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./store */ "./resources/js/store.js");
 /* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./routes */ "./resources/js/routes.js");
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 window.Form = vform__WEBPACK_IMPORTED_MODULE_0__["default"];
+ // Vue.use(Vuex);
 
-Vue.use((vuex_dist_vuex__WEBPACK_IMPORTED_MODULE_1___default()));
+window.Vuex = vuex__WEBPACK_IMPORTED_MODULE_1__["default"];
 Vue.component('Users', (__webpack_require__(/*! ../components/frontEnd/master/index */ "./resources/components/frontEnd/master/index.vue")["default"]));
 Vue.component('Admin', (__webpack_require__(/*! ../components/backEnd/master/index */ "./resources/components/backEnd/master/index.vue")["default"]));
 
-var store = new (vuex_dist_vuex__WEBPACK_IMPORTED_MODULE_1___default().Store)(_store__WEBPACK_IMPORTED_MODULE_2__["default"]);
+var store = new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store(_store__WEBPACK_IMPORTED_MODULE_2__["default"]);
 
 var router = new VueRouter({
   mode: 'history',
@@ -2619,16 +2620,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  state: {},
-  getters: {},
+  state: {
+    homesData: []
+  },
+  getters: {
+    adminHomeData: function adminHomeData(state) {
+      return state.homesData;
+    }
+  },
   actions: {
-    adminHomeData: function adminHomeData() {
-      axios.get('api/home-data').then(function (res) {
-        console.log(res);
+    adminHomeData: function adminHomeData(context) {
+      axios.get('api/homesData').then(function (res) {
+        console.log(res.data.homesData);
+        context.commit('adminHomeData', res.data.homesData);
       });
     }
   },
-  mutations: {}
+  mutations: {
+    adminHomeData: function adminHomeData(state, payload) {
+      return state.homesData = payload;
+    }
+  }
 });
 
 /***/ }),
@@ -22199,15 +22211,7 @@ var render = function () {
       ),
     ]),
     _vm._v(" "),
-    _vm._m(0),
-  ])
-}
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card-body" }, [
+    _c("div", { staticClass: "card-body" }, [
       _c(
         "table",
         {
@@ -22215,34 +22219,24 @@ var staticRenderFns = [
             "\n        table table-sm table-dark table-striped table-borderless\n        text-center\n      ",
         },
         [
-          _c("thead", [
-            _c("tr", [
-              _c("th", { staticClass: "align-middle" }, [_vm._v("Background")]),
-              _vm._v(" "),
-              _c("th", { staticClass: "align-middle" }, [_vm._v("Name")]),
-              _vm._v(" "),
-              _c("th", { staticClass: "align-middle" }, [
-                _vm._v("Focus Title"),
-              ]),
-              _vm._v(" "),
-              _c("th", { staticClass: "align-middle" }, [
-                _vm._v("Short Description"),
-              ]),
-              _vm._v(" "),
-              _c("th", { staticClass: "align-middle" }, [_vm._v("Action")]),
-            ]),
-          ]),
+          _vm._m(0),
           _vm._v(" "),
           _c("tbody", [
             _c("tr", [
               _c("td", { staticClass: "align-middle" }, [
                 _c(
                   "main",
-                  { staticClass: "bg-black position-relative rounded" },
+                  {
+                    class:
+                      "bg-" + _vm.data.bgColor + " position-relative rounded",
+                  },
                   [
                     _c("img", {
-                      staticClass: "card-img img-fluid opacity-25 h-100",
-                      attrs: { src: "frontEnd/assets/img/home.webp", alt: "" },
+                      class:
+                        "card-img img-fluid opacity-" +
+                        _vm.data.bgOpacity +
+                        " h-100",
+                      attrs: { src: _vm.data.bgImg, alt: "" },
                     }),
                     _vm._v(" "),
                     _c("section", {
@@ -22254,33 +22248,54 @@ var staticRenderFns = [
               ]),
               _vm._v(" "),
               _c("td", { staticClass: "align-middle" }, [
-                _vm._v("Md Rezaul Karim Shanto"),
+                _vm._v(_vm._s(_vm.data.name)),
               ]),
               _vm._v(" "),
               _c("td", { staticClass: "align-middle" }, [
-                _vm._v("Full Stack Web Developer"),
+                _vm._v(_vm._s(_vm.data.focusTitle)),
               ]),
               _vm._v(" "),
               _c("td", { staticClass: "align-middle" }, [
-                _vm._v(
-                  "\n            I am a fully professional full stack web developer Involving with\n            latest web designing and technologies is a great feel free to\n            contact creative.\n          "
-                ),
+                _vm._v(_vm._s(_vm.data.shortDescription)),
               ]),
               _vm._v(" "),
-              _c("td", { staticClass: "align-middle" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass: "btn btn-sm btn-primary",
-                    attrs: { href: "#" },
-                  },
-                  [_c("i", { staticClass: "fas fa-edit" })]
-                ),
-              ]),
+              _vm._m(1),
             ]),
           ]),
         ]
       ),
+    ]),
+  ])
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", { staticClass: "align-middle" }, [_vm._v("Background")]),
+        _vm._v(" "),
+        _c("th", { staticClass: "align-middle" }, [_vm._v("Name")]),
+        _vm._v(" "),
+        _c("th", { staticClass: "align-middle" }, [_vm._v("Focus Title")]),
+        _vm._v(" "),
+        _c("th", { staticClass: "align-middle" }, [
+          _vm._v("Short Description"),
+        ]),
+        _vm._v(" "),
+        _c("th", { staticClass: "align-middle" }, [_vm._v("Action")]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", { staticClass: "align-middle" }, [
+      _c("a", { staticClass: "btn btn-sm btn-primary", attrs: { href: "#" } }, [
+        _c("i", { staticClass: "fas fa-edit" }),
+      ]),
     ])
   },
 ]
@@ -39378,20 +39393,30 @@ function normalizeComponent (
 
 /***/ }),
 
-/***/ "./node_modules/vuex/dist/vuex.common.js":
-/*!***********************************************!*\
-  !*** ./node_modules/vuex/dist/vuex.common.js ***!
-  \***********************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ "./node_modules/vuex/dist/vuex.esm.js":
+/*!********************************************!*\
+  !*** ./node_modules/vuex/dist/vuex.esm.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   "Store": () => (/* binding */ Store),
+/* harmony export */   "createLogger": () => (/* binding */ createLogger),
+/* harmony export */   "createNamespacedHelpers": () => (/* binding */ createNamespacedHelpers),
+/* harmony export */   "install": () => (/* binding */ install),
+/* harmony export */   "mapActions": () => (/* binding */ mapActions),
+/* harmony export */   "mapGetters": () => (/* binding */ mapGetters),
+/* harmony export */   "mapMutations": () => (/* binding */ mapMutations),
+/* harmony export */   "mapState": () => (/* binding */ mapState)
+/* harmony export */ });
 /*!
  * vuex v3.6.2
  * (c) 2021 Evan You
  * @license MIT
  */
-
-
 function applyMixin (Vue) {
   var version = Number(Vue.version.split('.')[0]);
 
@@ -40616,7 +40641,7 @@ function pad (num, maxLength) {
   return repeat('0', maxLength - num.toString().length) + num
 }
 
-var index_cjs = {
+var index = {
   Store: Store,
   install: install,
   version: '3.6.2',
@@ -40628,7 +40653,8 @@ var index_cjs = {
   createLogger: createLogger
 };
 
-module.exports = index_cjs;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (index);
+
 
 
 /***/ }),

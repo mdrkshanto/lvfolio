@@ -3,8 +3,9 @@ require('./bootstrap');
 
 import Form from "vform";
 window.Form = Form;
-import Vuex from "vuex/dist/vuex";
-Vue.use(Vuex);
+import Vuex from "vuex";
+// Vue.use(Vuex);
+window.Vuex = Vuex;
 
 
 Vue.component('Users', require('../components/frontEnd/master/index').default)

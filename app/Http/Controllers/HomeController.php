@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+    public function homesData()
+    {
+        $homesData = Home::latest("updated_at")->first();
+        return response()->json(["homesData" => $homesData], 200);
+    }
+
     public function index()
     {
         return view('users');

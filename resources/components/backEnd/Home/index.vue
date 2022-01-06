@@ -29,10 +29,10 @@
         <tbody>
           <tr>
             <td class="align-middle">
-              <main class="bg-black position-relative rounded">
+              <main :class="`bg-${data.bgColor} position-relative rounded`">
                 <img
-                  src="frontEnd/assets/img/home.webp"
-                  class="card-img img-fluid opacity-25 h-100"
+                  :src="data.bgImg"
+                  :class="`card-img img-fluid opacity-${data.bgOpacity} h-100`"
                   alt=""
                 />
                 <section
@@ -47,13 +47,9 @@
                 ></section>
               </main>
             </td>
-            <td class="align-middle">Md Rezaul Karim Shanto</td>
-            <td class="align-middle">Full Stack Web Developer</td>
-            <td class="align-middle">
-              I am a fully professional full stack web developer Involving with
-              latest web designing and technologies is a great feel free to
-              contact creative.
-            </td>
+            <td class="align-middle">{{ data.name }}</td>
+            <td class="align-middle">{{ data.focusTitle }}</td>
+            <td class="align-middle">{{ data.shortDescription }}</td>
             <td class="align-middle">
               <a href="#" class="btn btn-sm btn-primary">
                 <i class="fas fa-edit"></i>
@@ -70,7 +66,11 @@ export default {
   mounted() {
     this.$store.dispatch("adminHomeData");
   },
-  
+  computed: {
+    data() {
+      return this.$store.getters.adminHomeData;
+    },
+  },
 };
 </script>
 <style scoped>
