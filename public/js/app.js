@@ -2461,12 +2461,9 @@ __webpack_require__.r(__webpack_exports__);
     bgImg: function bgImg(event) {
       this.form.bgImg = event.target.files[0];
     },
-    submit: function submit() {
-      var _this = this;
-
-      this.form.post("api/editHome{id}").then(function () {
-        _this.reset;
-      });
+    submit: function submit() {//   this.form.post("api/editHome{id}").then(() => {
+      //     this.reset;
+      //   });
     },
     reset: function reset() {
       this.form.bgImg = null;
@@ -2477,7 +2474,23 @@ __webpack_require__.r(__webpack_exports__);
       this.form.shortDescription = null;
       this.$refs.bgImg.value = null;
     }
-  }
+  },
+  mounted: function mounted() {
+    this.$store.dispatch("editHomeData", this.$route.params.id);
+  },
+  computed: {
+    editData: function editData() {
+      return this.$store.getters.editHomeData;
+    }
+  } //   watch: {
+  //     editData() {
+  //       return this.$store.getters.editHomeData;
+  //     },
+  //     modelData() {
+  //       $store.getters.editHomeData.bgColor = form.bgColor;
+  //     },
+  //   },
+
 });
 
 /***/ }),
@@ -2885,7 +2898,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   state: {
     homesData: [],
-    homeData: []
+    homeData: [],
+    editHomeData: []
   },
   getters: {
     adminHomeData: function adminHomeData(state) {
@@ -2893,19 +2907,28 @@ __webpack_require__.r(__webpack_exports__);
     },
     homeData: function homeData(state) {
       return state.homeData;
+    },
+    editHomeData: function editHomeData(state) {
+      return state.editHomeData;
     }
   },
   actions: {
     adminHomeData: function adminHomeData(context) {
       axios.get('api/homesData').then(function (res) {
-        console.log(res.data.homesData);
+        // console.log(res.data.homesData);
         context.commit('adminHomeData', res.data.homesData);
       });
     },
     homeData: function homeData(context) {
       axios.get('api/homeData').then(function (res) {
-        console.log(res.data.homeData);
+        // console.log(res.data.homeData);
         context.commit('homeData', res.data.homeData);
+      });
+    },
+    editHomeData: function editHomeData(context, payload) {
+      axios.get('api/editHomeData' + payload).then(function (res) {
+        console.log(res.data.editData);
+        context.commit('editHomeData', res.data.editData);
       });
     }
   },
@@ -2915,6 +2938,9 @@ __webpack_require__.r(__webpack_exports__);
     },
     homeData: function homeData(state, payload) {
       return state.homeData = payload;
+    },
+    editHomeData: function editHomeData(state, payload) {
+      return state.editHomeData = payload;
     }
   }
 });
@@ -22783,7 +22809,7 @@ var render = function () {
             },
           }),
         ]),
-        _vm._v(" "),
+        _vm._v("\n      " + _vm._s(_vm.editData.bgColor) + "\n      "),
         _c("div", { staticClass: "my-3" }, [
           _c("label", { staticClass: "form-label" }, [_vm._v("Focus Title")]),
           _vm._v(" "),

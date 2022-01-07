@@ -59,7 +59,7 @@
             v-model="form.name"
           />
         </div>
-
+        {{ editData.bgColor }}
         <div class="my-3">
           <label class="form-label">Focus Title</label>
           <input
@@ -151,9 +151,9 @@ export default {
       this.form.bgImg = event.target.files[0];
     },
     submit() {
-      this.form.post("api/editHome{id}").then(() => {
-        this.reset;
-      });
+      //   this.form.post("api/editHome{id}").then(() => {
+      //     this.reset;
+      //   });
     },
     reset() {
       this.form.bgImg = null;
@@ -165,6 +165,22 @@ export default {
       this.$refs.bgImg.value = null;
     },
   },
+  mounted() {
+    this.$store.dispatch("editHomeData", this.$route.params.id);
+  },
+  computed: {
+    editData() {
+      return this.$store.getters.editHomeData;
+    },
+  },
+//   watch: {
+//     editData() {
+//       return this.$store.getters.editHomeData;
+//     },
+//     modelData() {
+//       $store.getters.editHomeData.bgColor = form.bgColor;
+//     },
+//   },
 };
 </script>
 <style scoped>
