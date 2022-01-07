@@ -26,7 +26,7 @@
             <th class="align-middle">Action</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody v-for="data in datas" :key="data.id">
           <tr>
             <td class="align-middle">
               <main :class="`bg-${data.bgColor} position-relative rounded`">
@@ -51,9 +51,9 @@
             <td class="align-middle">{{ data.focusTitle }}</td>
             <td class="align-middle">{{ data.shortDescription }}</td>
             <td class="align-middle">
-              <a href="#" class="btn btn-sm btn-primary">
+              <router-link :to="{name:'editHome', params:{id:data.id}}" class="btn btn-sm btn-primary">
                 <i class="fas fa-edit"></i>
-              </a>
+              </router-link>
             </td>
           </tr>
         </tbody>
@@ -67,7 +67,7 @@ export default {
     this.$store.dispatch("adminHomeData");
   },
   computed: {
-    data() {
+    datas() {
       return this.$store.getters.adminHomeData;
     },
   },

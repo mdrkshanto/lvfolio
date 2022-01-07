@@ -20,5 +20,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('homesData',[HomeController::class, 'homesData']);
+Route::get('homeData',[HomeController::class, 'homeData']);
+Route::get('editHomeData{id}',[HomeController::class, 'editData']);
+Route::get('editHome{id}',[HomeController::class, 'edit']);
 
 Route::post('adHome',[HomeController::class, 'add']);

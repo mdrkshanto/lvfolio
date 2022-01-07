@@ -154,7 +154,13 @@ export default {
     },
     submit() {
       this.form.post("api/adHome").then(() => {
-        this.reset;
+        this.form.bgImg = null;
+        this.form.bgColor = null;
+        this.form.bgOpacity = null;
+        this.form.name = null;
+        this.form.focusTitle = null;
+        this.form.shortDescription = null;
+        this.$refs.bgImg.value = null;
       });
     },
     reset() {

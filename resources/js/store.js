@@ -1,11 +1,15 @@
 export default {
     state: {
-        homesData: []
+        homesData: [],
+        homeData: []
     },
     getters: {
         adminHomeData(state) {
             return state.homesData
-        }
+        },
+        homeData(state) {
+            return state.homeData
+        },
     },
     actions: {
         adminHomeData(context) {
@@ -14,10 +18,19 @@ export default {
                 context.commit('adminHomeData', res.data.homesData);
             })
         },
+        homeData(context) {
+            axios.get('api/homeData').then((res) => {
+                console.log(res.data.homeData);
+                context.commit('homeData', res.data.homeData);
+            })
+        },
     },
     mutations: {
         adminHomeData(state, payload) {
             return state.homesData = payload
-        }
+        },
+        homeData(state, payload) {
+            return state.homeData = payload
+        },
     },
 }

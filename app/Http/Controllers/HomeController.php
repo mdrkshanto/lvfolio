@@ -9,8 +9,19 @@ class HomeController extends Controller
 {
     public function homesData()
     {
-        $homesData = Home::latest("updated_at")->first();
+        $homesData = Home::all();
         return response()->json(["homesData" => $homesData], 200);
+    }
+
+    public function homeData()
+    {
+        $homeData = Home::latest("updated_at")->first();
+        return response()->json(["homeData" => $homeData], 200);
+    }
+    public function editData($id)
+    {
+        $editData = Home::find($id);
+        return response()->json(["editData" => $editData], 200);
     }
 
     public function index()
@@ -36,5 +47,11 @@ class HomeController extends Controller
         $home->focusTitle = $request->focusTitle;
         $home->shortDescription = $request->shortDescription;
         $home->save();
+    }
+    public function edit(Request $request,$id)
+    {
+        $home = Home::find($id);
+        // return response()->json(["editHome" => $editHome], 200);
+        // return $editHome;
     }
 }

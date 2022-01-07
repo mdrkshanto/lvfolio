@@ -4,7 +4,8 @@ import fResume from '../components/frontEnd/Resume/index'
 import fSkills from '../components/frontEnd/Skills/index'
 import fContact from '../components/frontEnd/Contact/index'
 import adminHome from '../components/backEnd/Home/index'
-import addAdHome from '../components/backEnd/Home/includes/add'
+import addHome from '../components/backEnd/Home/includes/add'
+import editHome from '../components/backEnd/Home/includes/edit'
 export const routes = [
     {
         path: '/',
@@ -52,6 +53,12 @@ export const routes = [
         path: '/add-home',
         name: 'addHome',
         meta: 'Add home page contents',
-        component: addAdHome
+        component: addHome
+    },
+    {
+        path: '/edit-home:id',
+        name: 'editHome',
+        meta: 'Edit home page contents',
+        component: editHome
     },
 ]

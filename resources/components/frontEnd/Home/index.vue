@@ -1,8 +1,8 @@
 <template>
-  <main class="bg-black text-light">
+  <main :class="`bg-${data.bgColor} text-light`">
     <img
-      src="frontEnd/assets/img/home.webp"
-      class="card-img img-fluid opacity-25 h-100"
+      :src="data.bgImg"
+      :class="`card-img img-fluid opacity-${data.bgOpacity} h-100`"
       alt=""
     />
     <section
@@ -17,18 +17,27 @@
     >
       <h3 class="card-title fw-bolder">
         <span class="me-1">I am</span
-        ><span class="text-capitalize ms-1">Md Rezaul Karim Shanto</span>
+        ><span class="text-capitalize ms-1">{{ data.name }}</span>
       </h3>
       <span class="display-4 fw-bolder text-capitalize"
-        >full stack web developer</span
+        >{{ data.focusTitle }}</span
       >
-      <p class="lead w-50 text-center">
-        I am a fully professional full stack web developer Involving with latest
-        web designing and technologies is a great feel free to contact creative.
-      </p>
+      <p class="lead w-50 text-center">{{ data.shortDescription }}</p>
     </section>
   </main>
 </template>
+<script>
+export default {
+  mounted() {
+    this.$store.dispatch("homeData");
+  },
+  computed: {
+    data() {
+      return this.$store.getters.homeData;
+    },
+  },
+};
+</script>
 <style scoped>
 main {
   height: 88.3vh;

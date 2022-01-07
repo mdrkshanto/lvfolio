@@ -15,6 +15,7 @@ Route::get('/contact' , [ContactController::class,'index']);
 Route::get('/admin' , [HomeController::class,'adminHome']);
 Route::get('/homepage' , [HomeController::class,'adminHome']);
 Route::get('/add-home' , [HomeController::class,'adminHome']);
+Route::get('/edit-home{id}' , [HomeController::class,'adminHome']);
 
 
 // Route::get('/dashboard', function () {
