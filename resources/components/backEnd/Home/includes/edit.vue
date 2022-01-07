@@ -2,7 +2,7 @@
   <div class="card">
     <div class="card-header">
       <div class="row justify-content-between">
-        <h3 class="card-title col">Add home</h3>
+        <h3 class="card-title col">Edit home</h3>
         <router-link
           :to="{ name: 'homePage' }"
           class="col-1 btn btn-sm btn-primary"
@@ -83,13 +83,11 @@
     <div
       class="card-footer"
       v-if="
-        form.bgImg &&
         form.bgColor &&
         form.bgOpacity &&
         form.name &&
         form.focusTitle &&
         form.shortDescription !== null &&
-        form.bgImg &&
         form.bgColor &&
         form.bgOpacity &&
         form.name &&
@@ -153,14 +151,8 @@ export default {
       this.form.bgImg = event.target.files[0];
     },
     submit() {
-      this.form.post("api/adHome").then(() => {
-        this.form.bgImg = null;
-        this.form.bgColor = null;
-        this.form.bgOpacity = null;
-        this.form.name = null;
-        this.form.focusTitle = null;
-        this.form.shortDescription = null;
-        this.$refs.bgImg.value = null;
+      this.form.post("api/editHome{id}").then(() => {
+        this.reset;
       });
     },
     reset() {

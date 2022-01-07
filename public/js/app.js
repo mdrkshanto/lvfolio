@@ -2394,8 +2394,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -2466,14 +2464,8 @@ __webpack_require__.r(__webpack_exports__);
     submit: function submit() {
       var _this = this;
 
-      this.form.post("api/adHome").then(function () {
-        _this.form.bgImg = null;
-        _this.form.bgColor = null;
-        _this.form.bgOpacity = null;
-        _this.form.name = null;
-        _this.form.focusTitle = null;
-        _this.form.shortDescription = null;
-        _this.$refs.bgImg.value = null;
+      this.form.post("api/editHome{id}").then(function () {
+        _this.reset;
       });
     },
     reset: function reset() {
@@ -22639,7 +22631,7 @@ var render = function () {
         "div",
         { staticClass: "row justify-content-between" },
         [
-          _c("h3", { staticClass: "card-title col" }, [_vm._v("Add home")]),
+          _c("h3", { staticClass: "card-title col" }, [_vm._v("Edit home")]),
           _vm._v(" "),
           _c(
             "router-link",
@@ -22848,13 +22840,11 @@ var render = function () {
       ]),
     ]),
     _vm._v(" "),
-    _vm.form.bgImg &&
     _vm.form.bgColor &&
     _vm.form.bgOpacity &&
     _vm.form.name &&
     _vm.form.focusTitle &&
     _vm.form.shortDescription !== null &&
-    _vm.form.bgImg &&
     _vm.form.bgColor &&
     _vm.form.bgOpacity &&
     _vm.form.name &&
