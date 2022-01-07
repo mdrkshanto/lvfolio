@@ -4,6 +4,7 @@ try {
     window.$ = window.jquery = window.jQuery = require('jquery/dist/jquery.slim.min')
     require('bootstrap/dist/js/bootstrap.bundle.min')
     window.Vue = require('vue/dist/vue')
+    window.Vuex = require('vuex');
     window.VueRouter = require('vue-router/dist/vue-router')
 } catch (error) { }
 

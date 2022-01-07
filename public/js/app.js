@@ -2741,24 +2741,20 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vform__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vform */ "./node_modules/vform/dist/vform.es.js");
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./store */ "./resources/js/store.js");
-/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./routes */ "./resources/js/routes.js");
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./store */ "./resources/js/store.js");
+/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./routes */ "./resources/js/routes.js");
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 window.Form = vform__WEBPACK_IMPORTED_MODULE_0__["default"];
- // Vue.use(Vuex);
-
-window.Vuex = vuex__WEBPACK_IMPORTED_MODULE_1__["default"];
 Vue.component('Users', (__webpack_require__(/*! ../components/frontEnd/master/index */ "./resources/components/frontEnd/master/index.vue")["default"]));
 Vue.component('Admin', (__webpack_require__(/*! ../components/backEnd/master/index */ "./resources/components/backEnd/master/index.vue")["default"]));
 
-var store = new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store(_store__WEBPACK_IMPORTED_MODULE_2__["default"]);
+var store = new Vuex.Store(_store__WEBPACK_IMPORTED_MODULE_1__["default"]);
 
 var router = new VueRouter({
   mode: 'history',
-  routes: _routes__WEBPACK_IMPORTED_MODULE_3__.routes
+  routes: _routes__WEBPACK_IMPORTED_MODULE_2__.routes
 });
 router.beforeEach(function (to, from, next) {
   document.title = 'Shanto' + ' | ' + to.meta;
@@ -2785,6 +2781,7 @@ try {
   __webpack_require__(/*! bootstrap/dist/js/bootstrap.bundle.min */ "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js");
 
   window.Vue = __webpack_require__(/*! vue/dist/vue */ "./node_modules/vue/dist/vue.js");
+  window.Vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
   window.VueRouter = __webpack_require__(/*! vue-router/dist/vue-router */ "./node_modules/vue-router/dist/vue-router.js");
 } catch (error) {}
 
