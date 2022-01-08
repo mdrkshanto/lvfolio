@@ -2394,6 +2394,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -2461,9 +2463,12 @@ __webpack_require__.r(__webpack_exports__);
     bgImg: function bgImg(event) {
       this.form.bgImg = event.target.files[0];
     },
-    submit: function submit() {//   this.form.post("api/editHome{id}").then(() => {
-      //     this.reset;
-      //   });
+    submit: function submit() {
+      var _this = this;
+
+      this.form.post("api/adHome").then(function () {
+        _this.reset;
+      });
     },
     reset: function reset() {
       this.form.bgImg = null;
@@ -2476,21 +2481,12 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   mounted: function mounted() {
-    this.$store.dispatch("editHomeData", this.$route.params.id);
-  },
-  computed: {
-    editData: function editData() {
-      return this.$store.getters.editHomeData;
-    }
-  } //   watch: {
-  //     editData() {
-  //       return this.$store.getters.editHomeData;
-  //     },
-  //     modelData() {
-  //       $store.getters.editHomeData.bgColor = form.bgColor;
-  //     },
-  //   },
+    var _this2 = this;
 
+    axios.get("api/editHomeData" + this.$route.params.id).then(function (res) {
+      _this2.$set(_this2, "form", res.data.editData);
+    });
+  }
 });
 
 /***/ }),
@@ -2897,50 +2893,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   state: {
-    homesData: [],
-    homeData: [],
-    editHomeData: []
+    homesData: []
   },
   getters: {
     adminHomeData: function adminHomeData(state) {
       return state.homesData;
-    },
-    homeData: function homeData(state) {
-      return state.homeData;
-    },
-    editHomeData: function editHomeData(state) {
-      return state.editHomeData;
     }
   },
   actions: {
     adminHomeData: function adminHomeData(context) {
       axios.get('api/homesData').then(function (res) {
-        // console.log(res.data.homesData);
         context.commit('adminHomeData', res.data.homesData);
-      });
-    },
-    homeData: function homeData(context) {
-      axios.get('api/homeData').then(function (res) {
-        // console.log(res.data.homeData);
-        context.commit('homeData', res.data.homeData);
-      });
-    },
-    editHomeData: function editHomeData(context, payload) {
-      axios.get('api/editHomeData' + payload).then(function (res) {
-        console.log(res.data.editData);
-        context.commit('editHomeData', res.data.editData);
       });
     }
   },
   mutations: {
     adminHomeData: function adminHomeData(state, payload) {
       return state.homesData = payload;
-    },
-    homeData: function homeData(state, payload) {
-      return state.homeData = payload;
-    },
-    editHomeData: function editHomeData(state, payload) {
-      return state.editHomeData = payload;
     }
   }
 });
@@ -22657,7 +22626,7 @@ var render = function () {
         "div",
         { staticClass: "row justify-content-between" },
         [
-          _c("h3", { staticClass: "card-title col" }, [_vm._v("Edit home")]),
+          _c("h3", { staticClass: "card-title col" }, [_vm._v("Add home")]),
           _vm._v(" "),
           _c(
             "router-link",
@@ -22809,7 +22778,7 @@ var render = function () {
             },
           }),
         ]),
-        _vm._v("\n      " + _vm._s(_vm.editData.bgColor) + "\n      "),
+        _vm._v(" "),
         _c("div", { staticClass: "my-3" }, [
           _c("label", { staticClass: "form-label" }, [_vm._v("Focus Title")]),
           _vm._v(" "),
@@ -22866,11 +22835,13 @@ var render = function () {
       ]),
     ]),
     _vm._v(" "),
+    _vm.form.bgImg &&
     _vm.form.bgColor &&
     _vm.form.bgOpacity &&
     _vm.form.name &&
     _vm.form.focusTitle &&
     _vm.form.shortDescription !== null &&
+    _vm.form.bgImg &&
     _vm.form.bgColor &&
     _vm.form.bgOpacity &&
     _vm.form.name &&

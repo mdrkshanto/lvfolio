@@ -2,7 +2,7 @@
   <div class="card">
     <div class="card-header">
       <div class="row justify-content-between">
-        <h3 class="card-title col">Edit home</h3>
+        <h3 class="card-title col">Add home</h3>
         <router-link
           :to="{ name: 'homePage' }"
           class="col-1 btn btn-sm btn-primary"
@@ -59,7 +59,7 @@
             v-model="form.name"
           />
         </div>
-        {{ editData.bgColor }}
+
         <div class="my-3">
           <label class="form-label">Focus Title</label>
           <input
@@ -83,11 +83,13 @@
     <div
       class="card-footer"
       v-if="
+        form.bgImg &&
         form.bgColor &&
         form.bgOpacity &&
         form.name &&
         form.focusTitle &&
         form.shortDescription !== null &&
+        form.bgImg &&
         form.bgColor &&
         form.bgOpacity &&
         form.name &&
@@ -151,9 +153,9 @@ export default {
       this.form.bgImg = event.target.files[0];
     },
     submit() {
-      //   this.form.post("api/editHome{id}").then(() => {
-      //     this.reset;
-      //   });
+      this.form.post("api/adHome").then(() => {
+        this.reset;
+      });
     },
     reset() {
       this.form.bgImg = null;
@@ -166,21 +168,11 @@ export default {
     },
   },
   mounted() {
-    this.$store.dispatch("editHomeData", this.$route.params.id);
+    axios.get("api/editHomeData" + this.$route.params.id).then((res) => {
+      this.$set(this, "form", res.data.editData);
+    });
   },
-  computed: {
-    editData() {
-      return this.$store.getters.editHomeData;
-    },
-  },
-//   watch: {
-//     editData() {
-//       return this.$store.getters.editHomeData;
-//     },
-//     modelData() {
-//       $store.getters.editHomeData.bgColor = form.bgColor;
-//     },
-//   },
+
 };
 </script>
 <style scoped>
