@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card m-0">
     <div class="card-header">
       <div class="row justify-content-between">
         <h3 class="card-title col">Add home</h3>
