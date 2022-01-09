@@ -2470,7 +2470,7 @@ __webpack_require__.r(__webpack_exports__);
         _this.$router.push({
           name: 'homePage'
         });
-      })["catch"](function (error) {});
+      });
     },
     reset: function reset() {
       this.form.bgImg = null;

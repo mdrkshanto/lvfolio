@@ -157,7 +157,7 @@ export default {
         .post("api/homeUpdate" + this.$route.params.id, this.form)
         .then(() => {
           this.$router.push({name:'homePage'});
-        }).catch((error)=>{});
+        });
     },
     reset() {
       this.form.bgImg = null;
