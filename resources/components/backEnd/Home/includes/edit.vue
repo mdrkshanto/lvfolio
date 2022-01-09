@@ -156,10 +156,8 @@ export default {
       axios
         .post("api/homeUpdate" + this.$route.params.id, this.form)
         .then(() => {
-          // this.reset;
-          console.log("Updated!!");
           this.$router.push({name:'homePage'});
-        });
+        }).catch((error)=>{});
     },
     reset() {
       this.form.bgImg = null;

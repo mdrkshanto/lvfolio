@@ -2467,13 +2467,10 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       axios.post("api/homeUpdate" + this.$route.params.id, this.form).then(function () {
-        // this.reset;
-        console.log("Updated!!");
-
         _this.$router.push({
           name: 'homePage'
         });
-      });
+      })["catch"](function (error) {});
     },
     reset: function reset() {
       this.form.bgImg = null;
