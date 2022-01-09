@@ -48,9 +48,27 @@ class HomeController extends Controller
         $home->shortDescription = $request->shortDescription;
         $home->save();
     }
-    public function edit(Request $request,$id)
+    public function update(Request $request, $id)
     {
         $home = Home::find($id);
+
+        $img = $request->file('bgImg');
+
+        if ($img) {
+            unlink($home->bgImg);
+            $imgName = time() . rand() . '.' . $img->extension();
+            $img->move(public_path('frontEnd/assets/img/home/bg'), $imgName);
+            $bgImg = 'frontEnd/assets/img/home/bg/' . $imgName;
+            $home->bgImg = $bgImg;
+            $home->update();
+        } else {
+            $home->bgColor = $request->bgColor;
+            $home->bgOpacity = $request->bgOpacity;
+            $home->name = $request->name;
+            $home->focusTitle = $request->focusTitle;
+            $home->shortDescription = $request->shortDescription;
+            $home->update();
+        }
         // return response()->json(["editHome" => $editHome], 200);
         // return $editHome;
     }

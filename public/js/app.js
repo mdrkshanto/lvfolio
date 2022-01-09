@@ -2466,8 +2466,13 @@ __webpack_require__.r(__webpack_exports__);
     submit: function submit() {
       var _this = this;
 
-      this.form.post("api/adHome").then(function () {
-        _this.reset;
+      axios.post("api/homeUpdate" + this.$route.params.id, this.form).then(function () {
+        // this.reset;
+        console.log("Updated!!");
+
+        _this.$router.push({
+          name: 'homePage'
+        });
       });
     },
     reset: function reset() {
@@ -2815,7 +2820,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "routes": () => (/* binding */ routes)
 /* harmony export */ });
-/* harmony import */ var _components_frontEnd_Home_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/frontEnd/Home/index */ "./resources/components/frontEnd/Home/index.vue");
+/* harmony import */ var _components_frontEnd_Home_index_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/frontEnd/Home/index.vue */ "./resources/components/frontEnd/Home/index.vue");
 /* harmony import */ var _components_frontEnd_About_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/frontEnd/About/index */ "./resources/components/frontEnd/About/index.vue");
 /* harmony import */ var _components_frontEnd_Resume_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/frontEnd/Resume/index */ "./resources/components/frontEnd/Resume/index.vue");
 /* harmony import */ var _components_frontEnd_Skills_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/frontEnd/Skills/index */ "./resources/components/frontEnd/Skills/index.vue");
@@ -2835,7 +2840,7 @@ var routes = [{
   path: '/',
   name: 'fHome',
   meta: 'Home',
-  component: _components_frontEnd_Home_index__WEBPACK_IMPORTED_MODULE_0__["default"]
+  component: _components_frontEnd_Home_index_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
 }, {
   path: '/about',
   name: 'fAbout',
@@ -2893,23 +2898,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   state: {
-    homesData: []
+    adminHomeData: [],
+    homeData: []
   },
   getters: {
     adminHomeData: function adminHomeData(state) {
-      return state.homesData;
+      return state.adminHomeData;
+    },
+    homeData: function homeData(state) {
+      return state.homeData;
     }
   },
   actions: {
     adminHomeData: function adminHomeData(context) {
-      axios.get('api/homesData').then(function (res) {
+      axios.get('api/adminHomeData').then(function (res) {
         context.commit('adminHomeData', res.data.homesData);
+      });
+    },
+    homeData: function homeData(context) {
+      axios.get('api/homeData').then(function (res) {
+        context.commit('homeData', res.data.homeData);
       });
     }
   },
   mutations: {
     adminHomeData: function adminHomeData(state, payload) {
-      return state.homesData = payload;
+      return state.adminHomeData = payload;
+    },
+    homeData: function homeData(state, payload) {
+      return state.homeData = payload;
     }
   }
 });
@@ -22860,7 +22877,7 @@ var render = function () {
                   },
                 },
               },
-              [_vm._v("\n        Submit\n      ")]
+              [_vm._v("\n        Update\n      ")]
             ),
             _vm._v(" "),
             _c(

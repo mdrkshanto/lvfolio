@@ -1,4 +1,4 @@
-import fHome from '../components/frontEnd/Home/index'
+import fHome from '../components/frontEnd/Home/index.vue'
 import fAbout from '../components/frontEnd/About/index'
 import fResume from '../components/frontEnd/Resume/index'
 import fSkills from '../components/frontEnd/Skills/index'

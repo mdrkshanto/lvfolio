@@ -102,7 +102,7 @@
           class="col-1 btn btn-success btn-sm shadow-none"
           @click.prevent="submit"
         >
-          Submit
+          Update
         </button>
         <button
           class="col-1 btn btn-secondary btn-sm shadow-none"
@@ -153,9 +153,13 @@ export default {
       this.form.bgImg = event.target.files[0];
     },
     submit() {
-      this.form.post("api/adHome").then(() => {
-        this.reset;
-      });
+      axios
+        .post("api/homeUpdate" + this.$route.params.id, this.form)
+        .then(() => {
+          // this.reset;
+          console.log("Updated!!");
+          this.$router.push({name:'homePage'});
+        });
     },
     reset() {
       this.form.bgImg = null;
@@ -172,7 +176,6 @@ export default {
       this.$set(this, "form", res.data.editData);
     });
   },
-
 };
 </script>
 <style scoped>
