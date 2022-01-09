@@ -51,15 +51,21 @@ class HomeController extends Controller
     public function update(Request $request, $id)
     {
         $home = Home::find($id);
-
         $img = $request->file('bgImg');
-
         if ($img) {
+            // if(File::exists($home->bgImg)){
+            //     File::delete($home->bgImg);
+            // }
             unlink($home->bgImg);
             $imgName = time() . rand() . '.' . $img->extension();
             $img->move(public_path('frontEnd/assets/img/home/bg'), $imgName);
             $bgImg = 'frontEnd/assets/img/home/bg/' . $imgName;
             $home->bgImg = $bgImg;
+            $home->bgColor = $request->bgColor;
+            $home->bgOpacity = $request->bgOpacity;
+            $home->name = $request->name;
+            $home->focusTitle = $request->focusTitle;
+            $home->shortDescription = $request->shortDescription;
             $home->update();
         } else {
             $home->bgColor = $request->bgColor;
