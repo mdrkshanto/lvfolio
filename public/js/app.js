@@ -22380,7 +22380,7 @@ var render = function () {
             _c("input", {
               ref: "bgImg",
               staticClass: "form-control form-control-sm",
-              attrs: { type: "file", accept: "image/webp" },
+              attrs: { type: "file", accept: "image/*" },
               on: { change: _vm.bgImg },
             }),
             _vm._v(" "),
@@ -22664,7 +22664,7 @@ var render = function () {
             _c("input", {
               ref: "bgImg",
               staticClass: "form-control form-control-sm",
-              attrs: { type: "file", accept: "image/webp" },
+              attrs: { type: "file", accept: "image/*" },
               on: { change: _vm.bgImg },
             }),
             _vm._v(" "),

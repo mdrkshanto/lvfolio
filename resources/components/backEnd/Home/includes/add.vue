@@ -19,7 +19,7 @@
             <input
               class="form-control form-control-sm"
               type="file"
-              accept="image/webp"
+              accept="image/*"
               @change="bgImg"
               ref="bgImg"
             />
