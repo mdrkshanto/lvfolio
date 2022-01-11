@@ -7,75 +7,79 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function homesData()
-    {
-        $homesData = Home::all();
-        return response()->json(["homesData" => $homesData], 200);
-    }
-
-    public function homeData()
-    {
-        $homeData = Home::latest("updated_at")->first();
-        return response()->json(["homeData" => $homeData], 200);
-    }
-    public function editData($id)
-    {
-        $editData = Home::find($id);
-        return response()->json(["editData" => $editData], 200);
-    }
-
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
-        return view('users');
+        //
     }
 
-    public function adminHome()
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
     {
-        return view('admin');
+        //
     }
-    public function add(Request $request)
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
     {
-        $img = $request->file('bgImg');
-        $imgName = time() . rand() . '.' . $img->extension();
-        $img->move(public_path('frontEnd/assets/img/home/bg'), $imgName);
-        $bgImg = 'frontEnd/assets/img/home/bg/' . $imgName;
-        $home = new Home();
-        $home->bgImg = $bgImg;
-        $home->bgColor = $request->bgColor;
-        $home->bgOpacity = $request->bgOpacity;
-        $home->name = $request->name;
-        $home->focusTitle = $request->focusTitle;
-        $home->shortDescription = $request->shortDescription;
-        $home->save();
+        //
     }
-    public function update(Request $request, $id)
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Home  $home
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Home $home)
     {
-        $home = Home::find($id);
-        $img = $request->file('bgImg');
-        if ($img) {
-            // if(File::exists($home->bgImg)){
-            //     File::delete($home->bgImg);
-            // }
-            unlink($home->bgImg);
-            $imgName = time() . rand() . '.' . $img->extension();
-            $img->move(public_path('frontEnd/assets/img/home/bg'), $imgName);
-            $bgImg = 'frontEnd/assets/img/home/bg/' . $imgName;
-            $home->bgImg = $bgImg;
-            $home->bgColor = $request->bgColor;
-            $home->bgOpacity = $request->bgOpacity;
-            $home->name = $request->name;
-            $home->focusTitle = $request->focusTitle;
-            $home->shortDescription = $request->shortDescription;
-            $home->update();
-        } else {
-            $home->bgColor = $request->bgColor;
-            $home->bgOpacity = $request->bgOpacity;
-            $home->name = $request->name;
-            $home->focusTitle = $request->focusTitle;
-            $home->shortDescription = $request->shortDescription;
-            $home->update();
-        }
-        // return response()->json(["editHome" => $editHome], 200);
-        // return $editHome;
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\Home  $home
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Home $home)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Home  $home
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, Home $home)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\Home  $home
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Home $home)
+    {
+        //
     }
 }
