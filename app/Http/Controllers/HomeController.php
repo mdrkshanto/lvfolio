@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Home;
 use Illuminate\Http\Request;
-use File;
+use Illuminate\Support\Facades\File;
 
 class HomeController extends Controller
 {
@@ -52,25 +52,21 @@ class HomeController extends Controller
     public function update(Request $request, $id)
     {
         $home = Home::find($id);
-        // if ($request->hasFile('bgImg')) {
-        // if (File::exists(public_path($home->bgImg))) {
-        //     File::delete(public_path($home->bgImg));
-        // }
-        // if ($home->bgImg) {
-        //     unlink($home->bgImg);
-        // }
-        $img = $request->file('bgImg');
-        $imgName = time() . rand() . '.' . $img->extension();
-        $img->move(public_path('frontEnd/assets/img/home/bg'), $imgName);
-        $bgImg = 'frontEnd/assets/img/home/bg/' . $imgName;
-        $home->bgImg = $bgImg;
-        // }
-        // $home->bgColor = $request->bgColor;
-        // $home->bgOpacity = $request->bgOpacity;
-        // $home->name = $request->name;
-        // $home->focusTitle = $request->focusTitle;
-        // $home->shortDescription = $request->shortDescription;
-        $home->save();
+        if ($request->file('bgImg')) {
+            unlink($home->bgImg);
+            $img = $request->file('bgImg');
+            $imgName = time() . rand() . '.' . $img->extension();
+            $img->move(public_path('frontEnd/assets/img/home/bg'), $imgName);
+            $bgImg = 'frontEnd/assets/img/home/bg/' . $imgName;
+            $home->bgImg = $bgImg;
+            // $home->update();
+        }
+        $home->bgColor = $request->bgColor;
+        $home->bgOpacity = $request->bgOpacity;
+        $home->name = $request->name;
+        $home->focusTitle = $request->focusTitle;
+        $home->shortDescription = $request->shortDescription;
+        $home->update();
         // return response()->json(["editHome" => $editHome], 200);
         // return $editHome;
     }

@@ -20,7 +20,7 @@
               class="form-control form-control-sm"
               type="file"
               accept="image/*"
-              @change="bgImg"
+              @change="bgImgc"
               ref="bgImg"
             />
             <select
@@ -149,14 +149,16 @@ export default {
     };
   },
   methods: {
-    bgImg(event) {
-      this.form.bgImg = event.target.files[0];
+    bgImgc(e) {
+      this.form.bgImg = e.target.files[0];
     },
     submit() {
+    //   console.log(this.form);
       axios
         .post("api/homeUpdate" + this.$route.params.id, this.form)
-        .then(() => {
-          this.$router.push({name:'homePage'});
+        .then((r) => {
+        //   console.log(r);
+          this.$router.push({ name: "homePage" });
         });
     },
     reset() {

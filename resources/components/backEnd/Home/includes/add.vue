@@ -156,6 +156,7 @@ export default {
       this.form.post("api/adHome").then(() => {
         this.reset;
       });
+      console.log(this.form);
     },
     reset() {
       this.form.bgImg = null;

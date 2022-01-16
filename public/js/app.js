@@ -2254,6 +2254,7 @@ __webpack_require__.r(__webpack_exports__);
       this.form.post("api/adHome").then(function () {
         _this.reset;
       });
+      console.log(this.form);
     },
     reset: function reset() {
       this.form.bgImg = null;
@@ -2460,15 +2461,17 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
-    bgImg: function bgImg(event) {
-      this.form.bgImg = event.target.files[0];
+    bgImgc: function bgImgc(e) {
+      this.form.bgImg = e.target.files[0];
     },
     submit: function submit() {
       var _this = this;
 
-      axios.post("api/homeUpdate" + this.$route.params.id, this.form).then(function () {
+      //   console.log(this.form);
+      axios.post("api/homeUpdate" + this.$route.params.id, this.form).then(function (r) {
+        //   console.log(r);
         _this.$router.push({
-          name: 'homePage'
+          name: "homePage"
         });
       });
     },
@@ -22665,7 +22668,7 @@ var render = function () {
               ref: "bgImg",
               staticClass: "form-control form-control-sm",
               attrs: { type: "file", accept: "image/*" },
-              on: { change: _vm.bgImg },
+              on: { change: _vm.bgImgc },
             }),
             _vm._v(" "),
             _c(
